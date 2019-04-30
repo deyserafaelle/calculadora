@@ -13,4 +13,8 @@ describe("Index", () => {
 
         expect(result).toBe(0.5);
     });
+
+    it("divisao: divisão por zero", () => {
+        expect(() => divisao(1, 0)).toThrow();
+    });
 });
