@@ -1,0 +1,46 @@
+{
+  "name": "simple-calc",
+  "version": "1.0.0",
+  "description": "Calculadora que faz contas e somas aritméticas da Matemática",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc jasmine-ts --config=jasmine.json"
+  },
+  "keywords": [
+    "calculadora"
+  ],
+  "author": "Deyse Machado",
+  "license": "MIT",
+  "dependencies": {
+    "jasmine": "^3.4.0",
+    "jasmine-console-reporter": "^3.1.0",
+    "jasmine-ts": "^0.3.0",
+    "node-ts": "^5.0.1",
+    "nyc": "^14.0.0",
+    "ts-node": "^8.1.0",
+    "typescript": "^3.4.5"
+  },
+  "nyc": {
+    "extension": [
+      ".ts",
+      ".tsx"
+    ],
+    "exclude": [
+      "coverage",
+      "test",
+      "build"
+    ],
+    "reporter": [
+      "html",
+      "text"
+    ],
+    "all": true,
+    "check-coverage": true,
+    "lines": 100,
+    "branches": 100,
+    "functions": 100
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.12"
+  }
+}
